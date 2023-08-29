@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: game-demo
+data:
+  pdns.d: |
+    launch=gmysql:dns
+    gmysql-dns-host=mariadb-service
+    gmysql-dns-dbname=powerdns
+    gmysql-dns-user=powerdns
+    gmysql-dns-password=powerdns
+    gmysql-dns-dnssec=yes
