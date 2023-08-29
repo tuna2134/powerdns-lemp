@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: game-demo
 data:
-  pdns.d: |
+  pdns.conf: |
     launch=gmysql:dns
     gmysql-dns-host=mariadb-service
     gmysql-dns-dbname=powerdns
