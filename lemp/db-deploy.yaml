@@ -24,6 +24,8 @@ spec:
           value: powerdns
         - name: MARIADB_PASSWORD
           value: powerdns
+        - name: MARIADB_ROOT_PASSWORD
+          value: MariaRo0tPasswOrd
         volumeMounts:
         - mountPath: "/var/lib/mysql/"
           name: mypd
