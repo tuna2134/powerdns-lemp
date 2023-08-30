@@ -21,4 +21,4 @@ spec:
         - name: SQLALCHEMY_DATABASE_URI
           value: mysql://powerdns:powerdns@powerdns-service/powerdns
         - name: GUNICORN_WORKERS
-          value: 2
+          value: "2"
