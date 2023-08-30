@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deployment
+  labels:
+    app: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: powerdnsadmin/pda-legacy:latest
+        env:
+        - name: SQLALCHEMY_DATABASE_URI
+          value: mysql://powerdns:powerdns@powerdns-service/powerdns
+        - name: GUNICORN_WORKERS
+          value: 2
