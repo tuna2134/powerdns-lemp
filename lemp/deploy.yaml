@@ -25,3 +25,10 @@ spec:
             secretKeyRef:
               name: pdns-secret
               value: api-key
+        volumeMounts:
+        - name: config
+          mountPath: "/etc/pdns"
+      volumes:
+      - name: config
+        configMap:
+          name: powerdns-configmap
